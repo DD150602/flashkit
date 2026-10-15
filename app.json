@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "FlashKit",
+    "slug": "flashkit",
+    "version": "1.0.0",
+    "scheme": "flashkit",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.flashkit.app"
+    },
+    "android": {
+      "package": "com.flashkit.app",
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.CAMERA"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "FlashKit usa la cámara trasera para encender el flash como linterna.",
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "barcodeScannerEnabled": false
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "FlashKit usa el movimiento para detectar sacudidas y controlar la linterna."
+        }
+      ],
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "29c44589-09ba-4cb5-b5d3-b4a31d3ebbb8"
+      }
+    }
+  }
+}
