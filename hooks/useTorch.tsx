@@ -28,8 +28,8 @@ export function TorchProvider({ children }: PropsWithChildren) {
   const requestRef = useRef(false);
   const previousRoute = useRef<string | null>(null);
   const { settings } = useAppSettings();
-  const segments = useSegments();
-  const onTorchRoute = segments[segments.length - 1] === 'index';
+  const segments = useSegments<['(tabs)'] | ['(tabs)', 'sensor'] | ['(tabs)', 'settings']>();
+  const onTorchRoute = segments[segments.length - 1] === '(tabs)';
   const onSensorRoute = segments[segments.length - 1] === 'sensor';
   const sensorCanControl = onSensorRoute && settings.shakeEnabled;
   const cameraRoute = onTorchRoute || sensorCanControl;
@@ -155,3 +155,6 @@ export function useTorch() {
   if (!context) throw new Error('useTorch must be used inside TorchProvider');
   return context;
 }
+
+
+

@@ -6,14 +6,12 @@
     "scheme": "flashkit",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.flashkit.app"
     },
     "android": {
       "package": "com.flashkit.app",
-      "edgeToEdgeEnabled": true,
       "permissions": [
         "android.permission.CAMERA"
       ]
